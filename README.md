@@ -36,7 +36,7 @@ libreria Android para usar las funciones de base de datos en el celular.
                                 °
                                 |
                                 |
-                            numero de la columna a insertar el dato, es necesario tener presente esta numero para enviar un dato                                     correcto segun se estipulo en la creacion de la tabla, ver punto 1)
+                            numero de la columna a insertar el dato, es necesario tener presente esta numero para enviar un dato correcto segun se estipulo en la creacion de la tabla, ver punto 1)
           
   con esto ya tenemos los datos preparados para insertar o actualizar
   
@@ -46,8 +46,7 @@ libreria Android para usar las funciones de base de datos en el celular.
   
           int aLong = conectarSqLite.InsertarDatos(datosColumnasDtos);
           
-  esta insercion me devuelve un entero, generalmente devuelve el id de la fila donde se inserto el dato, pero si se presenta un error, 
-  dara como resultado un valor negativo que podemos filtrar.
+  esta insercion me devuelve un entero, generalmente devuelve el id de la fila donde se inserto el dato, pero si se presenta un error, dara como resultado un valor negativo que podemos filtrar.
   
         switch (aLong){
             case 0:{
