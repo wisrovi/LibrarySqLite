@@ -3,21 +3,21 @@ libreria Android para usar las funciones de base de datos en el celular.
 
 1) Crear el modelo de base de datos:
 
-        TablaDto tablaDto = new TablaDto();
-        tablaDto.setNombreTabla("WISROVI");
-        List<ColumnasDto> columnasDtos = new ArrayList<>();
-        columnasDtos.add(new ColumnasDto("nombre", TiposDatoSqLite.DatoString));
-        columnasDtos.add(new ColumnasDto("documento", TiposDatoSqLite.DatoEntero));
-        columnasDtos.add(new ColumnasDto("habilitado", TiposDatoSqLite.DatoBoolean));
-        tablaDto.setColumnasDtos(columnasDtos);
+        TablaCrear tabla = new TablaCrear();
+        tabla.setNombreTabla("WILI");
+        List<ColumnaCrear> columnasDtos = new ArrayList<>();
+        columnasDtos.add(new ColumnaCrear("nombre", TipoDatoSqLite.DatoString));
+        columnasDtos.add(new ColumnaCrear("documento", TipoDatoSqLite.DatoEntero));
+        columnasDtos.add(new ColumnaCrear("habilitado", TipoDatoSqLite.DatoBoolean));
+        tabla.setColumnasDtos(columnasDtos);
         
 2)  Conectar el modelo con una conexion estable de SqLite:
 
-        ConectarSqLite conectarSqLite = new ConectarSqLite(getApplicationContext(), tablaDto);
+        ConectarSqLite conectarSqLite = new ConectarSqLite(getApplicationContext(), tabla);
         
 3) Obtener una platilla modificable para llenar nuevos datos, se usa esta plantilla para insertar nuevos datos o actualizar datos existentes
 
-            List<DatosColumnasDto> datosColumnasDtos = conectarSqLite.plantillaUsoDatos();
+            List<DatosColumna> datosColumnas = conectarSqLite.plantillaUsoDatos();
             
 4) Preparando datos para insertar o editar:
 
@@ -36,7 +36,7 @@ libreria Android para usar las funciones de base de datos en el celular.
                                 °
                                 |
                                 |
-                            numero de la columna a insertar el dato, es necesario tener presente esta numero para enviar un dato correcto segun se estipulo en la creacion de la tabla, ver punto 1)
+  numero de la columna a insertar el dato, es necesario tener presente esta numero para enviar un dato correcto segun se estipulo en la creacion de la tabla, ver punto 1)
           
   con esto ya tenemos los datos preparados para insertar o actualizar
   
