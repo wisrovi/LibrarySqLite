@@ -15,7 +15,7 @@ libreria Android para usar las funciones de base de datos en el celular.
 
         ConectarSqLite conectarSqLite = new ConectarSqLite(getApplicationContext(), tabla);
         
-3) Obtener una platilla modificable para llenar nuevos datos, se usa esta plantilla para insertar nuevos datos o actualizar datos existentes
+3) Obtener una plantilla modificable para llenar nuevos datos, se usa esta plantilla para insertar nuevos datos o actualizar datos existentes
 
             List<DatosColumna> datosColumnas = conectarSqLite.plantillaUsoDatos();
             
