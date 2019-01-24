@@ -13,7 +13,7 @@ libreria Android para usar las funciones de base de datos en el celular.
         
 2)  Conectar el modelo con una conexion estable de SqLite:
 
-        ConectarSqLite conectarSqLite = new ConectarSqLite(MainActivity.this, tablaDto);
+        ConectarSqLite conectarSqLite = new ConectarSqLite(getApplicationContext(), tablaDto);
         
 3) Obtener una platilla modificable para llenar nuevos datos, se usa esta plantilla para insertar nuevos datos o actualizar datos existentes
 
